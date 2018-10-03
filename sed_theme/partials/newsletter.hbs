@@ -1,0 +1,8 @@
+{{#if @labs.subscribers}}
+<div class="subscribe">
+	<section class="gh-subscribe">
+		<h3>{{{t "Sign up to {blogtitle} newsletter" blogtitle=@blog.title}}}</h3>
+		{{subscribe_form placeholder=(t "Your email address")}}
+	</section>
+</div>
+{{/if}}

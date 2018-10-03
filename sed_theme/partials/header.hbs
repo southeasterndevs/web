@@ -1,0 +1,19 @@
+<header class="main-header">
+<button class="toggle-button"><i class="menu"></i></button>
+<nav class="main-menu">
+	{{navigation}}
+	</nav>
+	<div class="blog-information">
+		{{#if @blog.logo}}
+		<a class="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+		<div class="wrap">
+			<h2 class="description">{{@blog.description}}</h2>
+		</div>
+		{{else}}
+		<div class="wrap">
+			<h1 class="title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+			<h2 class="description">{{@blog.description}}</h2>
+		</div>
+		{{/if}}
+	</div>
+</header>

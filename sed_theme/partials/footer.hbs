@@ -1,0 +1,21 @@
+<footer class="main-footer">
+	{{>newsletter}}
+	<div class="footer-social">
+		{{#if @blog.facebook}}
+		<a href="{{facebook_url}}"><i class="facebook"></i></a>
+		{{/if}}
+		{{#if @blog.twitter}}
+		<a href="{{twitter_url}}"><i class="twitter"></i></a>
+		{{/if}}
+		{{>social-icons}}
+	</div>
+	<div class="footer-title-description">
+		<a href="{{@blog.url}}">{{@blog.title}}</a>{{#if @blog.description}}<br/>
+		<span>{{@blog.description}}</span>{{/if}}
+	</div>
+	<div class="footer-copyright">
+		{{t "Copyright"}} &copy; {{date format="YYYY"}}, <a href="{{@blog.url}}">{{@blog.title}}</a>. {{t "All Right Reserved"}}.
+		<br>
+		{{t "Published with"}} <a href="https://ghost.org">Ghost</a>.
+	</div>
+</footer>
